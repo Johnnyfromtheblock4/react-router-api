@@ -1,14 +1,16 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import BudgetContext from "../context/BudgetContext";
 
 const Navbar = () => {
   // stato che traccia la modalità
-  const [isBudgetModeActive, setIsBudgetModeActive] = useState(false);
+  const { budgetMode, setBudgetMode } = useContext(BudgetContext);
 
   // variabile che inverte la modalità
   const toggleBudgetMode = () => {
-    setIsBudgetModeActive(!isBudgetModeActive);
+    setBudgetMode(!budgetMode);
   };
+
   return (
     <nav>
       <ul className="list-unstyled d-flex">
@@ -22,8 +24,11 @@ const Navbar = () => {
           <NavLink to="/products">Prodotti</NavLink>
         </li>
         <li>
-          <button onClick={toggleBudgetMode}>
-            {isBudgetModeActive
+          <button
+            onClick={toggleBudgetMode}
+            className="btn btn-outline-secondary"
+          >
+            {budgetMode
               ? "Disattiva Modalità Budget"
               : "Attiva Modalità Budget"}
           </button>

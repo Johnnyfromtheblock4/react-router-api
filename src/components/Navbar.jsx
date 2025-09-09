@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useContext } from "react";
 import BudgetContext from "../context/BudgetContext";
 
 const Navbar = () => {

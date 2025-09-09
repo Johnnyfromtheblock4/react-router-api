@@ -1,10 +1,10 @@
 import { createContext, useState } from "react";
 
 // creo il contesto
-const BudgetContext = createContext();
+export const BudgetContext = createContext();
 
 // definisco il custom provider
-const BudgetProvider = ({ children }) => {
+export const BudgetProvider = ({ children }) => {
   // inserisco la variabile di stato
   const [budgetMode, setBudgetMode] = useState(true);
 

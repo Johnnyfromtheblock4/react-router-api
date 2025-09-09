@@ -12,8 +12,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav>
-      <ul className="list-unstyled d-flex">
+    <nav className="p-2">
+      <ul className="list-unstyled d-flex justify-content-between align-items-center mx-5">
         <li className="me-3">
           <NavLink to="/">Homepage</NavLink>
         </li>
@@ -24,10 +24,7 @@ const Navbar = () => {
           <NavLink to="/products">Prodotti</NavLink>
         </li>
         <li>
-          <button
-            onClick={toggleBudgetMode}
-            className="btn btn-outline-secondary"
-          >
+          <button onClick={toggleBudgetMode} className="btn btn-info">
             {budgetMode
               ? "Disattiva Modalità Budget"
               : "Attiva Modalità Budget"}

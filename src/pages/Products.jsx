@@ -46,12 +46,6 @@ const Products = () => {
       <div className="row gy-3">
         <div className="col-12">
           <h1 className="text-center">Prodotti</h1>
-          {/* Messaggio informativo per debug (opzionale, rimuovi se non serve) */}
-          <p className="text-center text-muted">
-            {budgetMode
-              ? "Modalità Budget attiva: solo prodotti ≤ $30"
-              : "Tutti i prodotti disponibili"}
-          </p>
         </div>
         {filteredProducts.map((product) => (
           <div className="col-4" key={product.id}>

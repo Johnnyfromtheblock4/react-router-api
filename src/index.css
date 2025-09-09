@@ -1,0 +1,10 @@
+nav a.active {
+  background-color: aqua;
+}
+
+.card-body img {
+  max-width: 200px;
+  height: auto;
+  display: "block";
+  margin: 0 auto 20px;
+}
